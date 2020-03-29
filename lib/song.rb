@@ -27,6 +27,17 @@ class Song
    g_count
  end
 
+   def self.artist_count
+     a_count = {}
+     @@artists.each do |el|
+       if a_count[el]
+         a_count[el] += 1
+       else
+         a_count[el] = 1
+       end
+     end
+     a_count
+   end
    
     attr_accessor :name, :artist, :genre 
   
@@ -42,3 +53,10 @@ class Song
   
   
 end
+
+
+
+
+
+
+
